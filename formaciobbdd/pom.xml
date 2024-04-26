@@ -5,13 +5,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-
 	<artifactId>formaciobbdd</artifactId>
-
 
 	<name>formaciobbdd</name>
 	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+
 	<parent>
 		<groupId>org.fundaciobit.formacio</groupId>
 		<artifactId>formacio</artifactId>
@@ -20,12 +18,7 @@
 
 
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit-version}</version>
-			<scope>test</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
