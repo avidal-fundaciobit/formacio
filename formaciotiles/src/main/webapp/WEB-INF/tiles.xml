@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="base.cap" template="/WEB-INF/tiles/header.jsp" />
+    <definition name="base.contingut" template="/WEB-INF/jsp/blanc.jsp" />
+    <definition name="base.peu" template="/WEB-INF/tiles/footer.jsp" />
+
+    <definition name="base.definition" template="/WEB-INF/tiles/layout.jsp">
+        <put-attribute name="cap" value="base.cap" />
+        <put-attribute name="contingut" value="base.contingut" />
+        <put-attribute name="peu" value="base.peu" />
+    </definition>
+
+    <definition name="home_tile" extends="base.definition">
+        <put-attribute name="contingut" value="/WEB-INF/views/home.jsp" />
+    </definition>
+
+    <definition name="calculadora_tile" extends="base.definition">
+        <put-attribute name="contingut" value="/WEB-INF/views/calculadora.jsp" />
+    </definition>
+
+</tiles-definitions>
