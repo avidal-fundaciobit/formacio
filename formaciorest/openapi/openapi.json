@@ -1,0 +1,90 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "API REST de Formacio",
+    "description" : "Conjunt de Serveis REST de proves",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8080/formaciorest/api"
+  } ],
+  "tags" : [ {
+    "name" : "FormacioRest",
+    "description" : "Exemples de Formació REST"
+  } ],
+  "paths" : {
+    "/exempleservei/exempleoperacioget" : {
+      "get" : {
+        "tags" : [ "FormacioRest" ],
+        "summary" : "A test operation GET",
+        "operationId" : "exempleOperacioGet",
+        "responses" : {
+          "200" : {
+            "description" : "Got it",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ExampleResponse"
+                }
+              }
+            }
+          },
+          "500" : {
+            "description" : "Server is down!"
+          }
+        }
+      }
+    },
+    "/exempleservei/exempleoperaciopost" : {
+      "post" : {
+        "tags" : [ "FormacioRest" ],
+        "summary" : "A test operation POST",
+        "operationId" : "exempleOperacioPost",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ExampleRequest"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Got it",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ExampleResponse"
+                }
+              }
+            }
+          },
+          "500" : {
+            "description" : "Server is down!"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "ExampleResponse" : {
+        "type" : "object",
+        "properties" : {
+          "status" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ExampleRequest" : {
+        "type" : "object",
+        "properties" : {
+          "prova" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
